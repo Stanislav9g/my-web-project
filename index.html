@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Основы веб-инженерии | Проект Станислава</title>
+    <title>Эволюция веб-технологий | Проект Станислава</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +13,7 @@
             <ul>
                 <li><a href="#about">О проекте</a></li>
                 <li><a href="#analogies">Аналогии</a></li>
+                <li><a href="#tools">Стек</a></li>
                 <li><button id="openPres" class="btn-pres">📊 Презентация</button></li>
             </ul>
         </nav>
@@ -26,53 +27,73 @@
     <div id="presModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-           <div class="slide active center-slide">
+            
+            <div class="presentation-screen">
+                <div class="slide active center-slide">
                     <div class="slide-badge">Индивидуальный проект</div>
                     <h2>«Веб-инженерия: эволюция технологий»</h2>
                     <div class="author-info">
-                        <p><strong>Автор:</strong> Рыженко Станислав Александрович, 9 «Г» класс</p>
+                        <p><strong>Автор:</strong> Рыженко Станислав, 9 «Г» класс</p>
                         <p><strong>Руководитель:</strong> Капинос Ирина Викторовна</p>
-                        <p class="school-name">МБОУ Гимназия № 6 г. Тихорецка, 2026 г.</p>
+                        <p class="school-name">МБОУ Гимназия № 6 г. Тихорецка</p>
                     </div>
                 </div>
                 
                 <div class="slide">
-                    <h2>🎯 Мои задачи</h2>
-                    <ul class="styled-list" style="text-align: left; display: inline-block;">
+                    <h2>🎯 Задачи исследования</h2>
+                    <ul class="styled-list">
                         <li>Изучить теоретическую базу веб-инженерии.</li>
                         <li>Раскрыть понятия Frontend и Backend.</li>
                         <li>Исследовать причины отказа от Adobe Flash.</li>
-                        <li>Провести диагностику знаний учащихся.</li>
-                        <li>Разработать этот авторский веб-сайт.</li>
+                        <li>Создать обучающий веб-ресурс.</li>
+                    </ul>
+                </div>
+
+                <div class="slide">
+                    <h2>⚙️ Стек разработки</h2>
+                    <p>При создании сайта использовались:</p>
+                    <ul class="styled-list">
+                        <li><strong>HTML5:</strong> семантическая структура.</li>
+                        <li><strong>CSS3:</strong> современный дизайн и Flexbox.</li>
+                        <li><strong>JavaScript:</strong> интерактив и управление слайдами.</li>
+                        <li><strong>GitHub Pages:</strong> хостинг проекта.</li>
                     </ul>
                 </div>
                 
                 <div class="slide">
-                    <h2>⚠️ Эволюция: почему Flash устарел?</h2>
-                    <p>Технология стала «пустышкой» из-за:</p>
-                    <ul class="styled-list" style="text-align: left; display: inline-block;">
-                        <li>Низкой безопасности и закрытого кода.</li>
-                        <li>Огромной нагрузки на систему (быстрый разряд батареи).</li>
-                        <li>Появления HTML5, который работает быстрее и легче.</li>
+                    <h2>⚠️ Смерть Adobe Flash</h2>
+                    <p>Основные причины перехода на HTML5:</p>
+                    <ul class="styled-list">
+                        <li>Низкий уровень безопасности (уязвимости).</li>
+                        <li>Высокое потребление ресурсов процессора.</li>
+                        <li>Отсутствие поддержки на мобильных устройствах.</li>
                     </ul>
                 </div>
                 
                 <div class="slide">
-                    <h2>📈 Результаты диагностики</h2>
+                    <h2>📈 Итоги диагностики</h2>
                     <div class="stats-container">
                         <div class="stat-box">
-                            <h3>До изучения</h3>
-                            <p><strong>90%</strong> не знали разницу между техпроцессами.</p>
+                            <h3>До сайта</h3>
+                            <p><strong>90%</strong> не знали базу.</p>
                         </div>
                         <div class="stat-box highlight">
-                            <h3>После изучения</h3>
-                            <p><strong>100%</strong> учеников успешно освоили материал.</p>
+                            <h3>После сайта</h3>
+                            <p><strong>100%</strong> освоили материал!</p>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="pres-controls">
+                <button id="prevSlide" class="nav-btn">◄ Назад</button>
+                <span id="slideCounter" class="counter">1 / 5</span>
+                <button id="nextSlide" class="nav-btn">Вперед ►</button>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
-        
         <section id="about">
             <h2 class="section-title">О проекте</h2>
             <p><strong>Цель работы:</strong> исследовать процесс эволюции веб-технологий для разработки обучающего веб-сайта.</p>
@@ -80,30 +101,52 @@
 
         <section id="analogies">
             <h2 class="section-title">Веб-технологии на примере ресторана</h2>
-            
             <div class="flex-cards">
                 <div class="card">
                     <div class="card-icon">🏠</div>
                     <h3>Frontend</h3>
-                    <p><strong>Зал ресторана.</strong> Интерьер, меню и удобные кресла. Это всё, с чем взаимодействует гость (пользователь). Я создал его с помощью <strong>HTML</strong> и <strong>CSS</strong>.</p>
+                    <p>Зал ресторана. Интерьер, меню и удобные кресла — то, что видит гость.</p>
                 </div>
-                
                 <div class="card">
                     <div class="card-icon">👨‍🍳</div>
                     <h3>Backend</h3>
-                    <p><strong>Кухня.</strong> Скрытая от глаз зона, где готовится еда (данные). Повара работают по рецептам (алгоритмам), чтобы вы получили свой заказ.</p>
+                    <p>Кухня. Скрытая зона, где готовятся данные по строгим рецептам.</p>
                 </div>
-                
                 <div class="card">
                     <div class="card-icon">🤵</div>
                     <h3>API</h3>
-                    <p><strong>Официант.</strong> Он принимает ваш заказ и относит его на кухню, а затем приносит готовое блюдо. Связующее звено между клиентом и сервером.</p>
+                    <p>Официант. Передает ваш заказ на кухню и приносит готовый ответ.</p>
                 </div>
             </div>
         </section>
 
-    </div> <footer>
-        <p>&copy; 2026 Рыженко Станислав. МБОУ Гимназия № 6 г. Тихорецка</p>
+        <section id="tools">
+            <h2 class="section-title">Инструментарий</h2>
+            <div class="flex-cards">
+                <div class="card" style="border-bottom: 4px solid #f1c40f;">
+                    <h3>VS Code</h3>
+                    <p>Редактор кода для написания HTML, CSS и JS скриптов.</p>
+                </div>
+                <div class="card" style="border-bottom: 4px solid #2ecc71;">
+                    <h3>GitHub</h3>
+                    <p>Хостинг и контроль версий для публикации сайта в сети.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" style="margin-top: 50px; padding: 30px; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <h2 class="section-title">Заключение</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                В ходе выполнения проекта была изучена история развития веб-инженерии. 
+                Созданный сайт наглядно демонстрирует переход от закрытых плагинов к современным 
+                стандартам. Практическая значимость работы заключается в возможности 
+                использования данного ресурса как учебного пособия.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Рыженко Станислав. Гимназия № 6 г. Тихорецка</p>
     </footer>
 
     <script src="script.js"></script>
