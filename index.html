@@ -13,92 +13,63 @@
             <ul>
                 <li><a href="#about">О проекте</a></li>
                 <li><a href="#analogies">Аналогии</a></li>
-                <li><button id="openPres" class="btn-pres">📊 Открыть презентацию</button></li>
+                <li><button id="openPres" class="btn-pres">📊 Презентация</button></li>
             </ul>
         </nav>
     </header>
 
     <section id="hero">
         <h1>Эволюция веб-технологий</h1>
-        <p>Разбираемся, как устроен интернет, на понятных примерах</p>
+        <p>Узнай, как устроен интернет, на понятных примерах</p>
     </section>
 
     <div id="presModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            
             <div class="presentation-screen">
-                
-                <div class="slide active center-slide">
-                    <div class="slide-badge">Индивидуальный проект</div>
-                    <h2>«Веб-инженерия: эволюция технологий и причины их устаревания»</h2>
-                    <div class="author-info">
-                        <p><strong>Автор:</strong> Рыженко Станислав Александрович, 9 «Г» класс</p>
-                        <p><strong>Руководитель:</strong> Капинос Ирина Викторовна</p>
-                        <p class="school-name">МБОУ Гимназия № 6 г. Тихорецка, 2026 г.</p>
-                    </div>
-                </div>
-                
-                <div class="slide">
-                    <h2>🎯 Задачи исследования</h2>
-                    <ul class="styled-list">
-                        <li>Изучить теоретическую базу веб-инженерии и этапы её развития.</li>
-                        <li>Раскрыть понятия Frontend, Backend и API через систему аналогий.</li>
-                        <li>Исследовать причины отказа от Adobe Flash.</li>
-                        <li>Провести диагностику знаний учащихся.</li>
-                        <li>Разработать авторский веб-сайт.</li>
-                    </ul>
-                </div>
-                
-                <div class="slide">
-                    <h2>📈 Результаты диагностики</h2>
-                    <div class="stats-container">
-                        <div class="stat-box">
-                            <h3>До изучения сайта</h3>
-                            <p><strong>90%</strong> учеников не знали разницу между Frontend и Backend.</p>
-                        </div>
-                        <div class="stat-box highlight">
-                            <h3>После изучения</h3>
-                            <p><strong>100%</strong> учеников успешно освоили материал и терминологию.</p>
-                        </div>
-                    </div>
-                </div>
-
+                <div class="slide active center-slide"><h2>Задачи исследования</h2>...</div>
+                <div class="slide"><h2>Диагностика</h2>...</div>
             </div>
-
             <div class="pres-controls">
                 <button id="prevSlide" class="nav-btn">◄ Назад</button>
-                <span id="slideCounter" class="counter">1 / 3</span>
+                <span id="slideCounter" class="counter">1 / 2</span>
                 <button id="nextSlide" class="nav-btn">Вперед ►</button>
             </div>
         </div>
     </div>
 
-    <section id="about" class="container">
-        <h2>О проекте</h2>
-        <p>Цель работы: исследовать процесс эволюции веб-технологий для разработки обучающего веб-сайта.</p>
-    </section>
-<section id="analogies" class="container">
-        <h2 class="section-title">Веб-технологии на примере ресторана</h2>
-        <div class="flex-cards">
-            <div class="card">
-                <div class="card-icon">🏠</div>
-                <h3>Frontend</h3>
-                <p><strong>Зал ресторана.</strong> Интерьер, меню и удобные кресла. Это всё, с чем взаимодействует гость (пользователь). Мы создали его с помощью HTML и CSS.</p>
+    <div class="container">
+        
+        <section id="about">
+            <h2 class="section-title">О проекте</h2>
+            <p><strong>Цель работы:</strong> исследовать процесс эволюции веб-технологий для разработки обучающего веб-сайта.</p>
+        </section>
+
+        <section id="analogies">
+            <h2 class="section-title">Веб-технологии на примере ресторана</h2>
+            
+            <div class="flex-cards">
+                <div class="card">
+                    <div class="card-icon">🏠</div>
+                    <h3>Frontend</h3>
+                    <p><strong>Зал ресторана.</strong> Интерьер, меню и удобные кресла. Это всё, с чем взаимодействует гость (пользователь). Мы создали его с помощью <strong>HTML</strong> и <strong>CSS</strong>.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">👨‍🍳</div>
+                    <h3>Backend</h3>
+                    <p><strong>Кухня.</strong> Скрытая от глаз зона, где готовится еда (данные). Повара работают по рецептам (алгоритмам), чтобы вы получили свой заказ.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🤵</div>
+                    <h3>API</h3>
+                    <p><strong>Официант.</strong> Он принимает ваш заказ и относит его на кухню, а затем приносит готовое блюдо. Связующее звено между клиентом и сервером.</p>
+                </div>
             </div>
-            <div class="card">
-                <div class="card-icon">👨‍🍳</div>
-                <h3>Backend</h3>
-                <p><strong>Кухня.</strong> Скрытая от глаз зона, где готовится еда (данные). Повара работают по рецептам (алгоритмам), чтобы вы получили свой заказ.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🤵</div>
-                <h3>API</h3>
-                <p><strong>Официант.</strong> Он принимает ваш заказ и относит его на кухню, а затем приносит готовое блюдо. Связующее звено между клиентом и сервером.</p>
-            </div>
-        </div>
-    </section>
-    <footer>
+        </section>
+
+    </div> <footer>
         <p>&copy; 2026 Рыженко Станислав. МБОУ Гимназия № 6 г. Тихорецка</p>
     </footer>
 
