@@ -13,7 +13,7 @@
             <ul>
                 <li><a href="#about">О проекте</a></li>
                 <li><a href="#analogies">Аналогии</a></li>
-                <li><button id="openPres" class="btn-pres">Открыть презентацию</button></li>
+                <li><button id="openPres" class="btn-pres">📊 Открыть презентацию</button></li>
             </ul>
         </nav>
     </header>
@@ -26,17 +26,22 @@
     <div id="presModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <div id="slides-container">
-                <div class="slide active">
-                    <h2>Индивидуальный проект</h2>
-                    <h3>«Веб-инженерия: эволюция технологий и причины их устаревания»</h3>
-                    <p>Автор: Рыженко Станислав Александрович, 9 «Г» класс</p>
-                    <p>Руководитель: Капинос Ирина Викторовна</p>
-                    <p>МБОУ Гимназия № 6 г. Тихорецка, 2026 г.</p>
+            
+            <div class="presentation-screen">
+                
+                <div class="slide active center-slide">
+                    <div class="slide-badge">Индивидуальный проект</div>
+                    <h2>«Веб-инженерия: эволюция технологий и причины их устаревания»</h2>
+                    <div class="author-info">
+                        <p><strong>Автор:</strong> Рыженко Станислав Александрович, 9 «Г» класс</p>
+                        <p><strong>Руководитель:</strong> Капинос Ирина Викторовна</p>
+                        <p class="school-name">МБОУ Гимназия № 6 г. Тихорецка, 2026 г.</p>
+                    </div>
                 </div>
+                
                 <div class="slide">
-                    <h2>Задачи исследования</h2>
-                    <ul>
+                    <h2>🎯 Задачи исследования</h2>
+                    <ul class="styled-list">
                         <li>Изучить теоретическую базу веб-инженерии и этапы её развития.</li>
                         <li>Раскрыть понятия Frontend, Backend и API через систему аналогий.</li>
                         <li>Исследовать причины отказа от Adobe Flash.</li>
@@ -44,15 +49,27 @@
                         <li>Разработать авторский веб-сайт.</li>
                     </ul>
                 </div>
+                
                 <div class="slide">
-                    <h2>Результаты диагностики</h2>
-                    <p>До изучения сайта: 90% учеников не знали разницу между Frontend и Backend.</p>
-                    <p>После изучения сайта: 100% учеников успешно освоили материал и терминологию.</p>
+                    <h2>📈 Результаты диагностики</h2>
+                    <div class="stats-container">
+                        <div class="stat-box">
+                            <h3>До изучения сайта</h3>
+                            <p><strong>90%</strong> учеников не знали разницу между Frontend и Backend.</p>
+                        </div>
+                        <div class="stat-box highlight">
+                            <h3>После изучения</h3>
+                            <p><strong>100%</strong> учеников успешно освоили материал и терминологию.</p>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-            <div class="nav-buttons">
-                <button id="prevSlide">Назад</button>
-                <button id="nextSlide">Вперед</button>
+
+            <div class="pres-controls">
+                <button id="prevSlide" class="nav-btn">◄ Назад</button>
+                <span id="slideCounter" class="counter">1 / 3</span>
+                <button id="nextSlide" class="nav-btn">Вперед ►</button>
             </div>
         </div>
     </div>
