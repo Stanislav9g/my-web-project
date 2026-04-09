@@ -1,3 +1,4 @@
+// Находим все элементы
 const modal = document.getElementById("presModal");
 const btn = document.getElementById("openPres");
 const span = document.getElementsByClassName("close")[0];
@@ -5,26 +6,30 @@ const slides = document.querySelectorAll(".slide");
 const counter = document.getElementById("slideCounter");
 let currentSlide = 0;
 
-// Функция обновления счетчика
+// Функция для обновления цифр счетчика (1 / 3, 2 / 3 и т.д.)
 function updateCounter() {
-    counter.innerText = `${currentSlide + 1} / ${slides.length}`;
+    if (counter) {
+        counter.innerText = `${currentSlide + 1} / ${slides.length}`;
+    }
 }
 
-// Открытие и закрытие
+// Открываем окно
 btn.onclick = () => {
     modal.style.display = "block";
     updateCounter();
 };
+
+// Закрываем на крестик
 span.onclick = () => modal.style.display = "none";
 
-// Закрытие по клику вне окна
+// Закрываем, если кликнули на темный фон
 window.onclick = (event) => {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
 
-// Следующий слайд
+// Кнопка "Вперед"
 document.getElementById("nextSlide").onclick = () => {
     slides[currentSlide].classList.remove("active");
     currentSlide = (currentSlide + 1) % slides.length;
@@ -32,7 +37,7 @@ document.getElementById("nextSlide").onclick = () => {
     updateCounter();
 };
 
-// Предыдущий слайд
+// Кнопка "Назад"
 document.getElementById("prevSlide").onclick = () => {
     slides[currentSlide].classList.remove("active");
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
